@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyMauiApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="ProcessNumbers"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout
+                Spacing="10"
+                
+                HorizontalOptions="Center">
+
+                <Button
+                    x:Name="Btn6"
+                    Text="6"
+                    SemanticProperties.Hint="6"
+                    Clicked="ProcessNumbers" />
+                
+                <Button
+                x:Name="Btn7"
+                Text="7"
+                SemanticProperties.Hint="7"
+                Clicked="ProcessNumbers"/>
+
+                <Button
+                x:Name="Btn8"
+                Text="8"
+                SemanticProperties.Hint="8"
+                Clicked="ProcessNumbers" />
+
+                <Button
+                x:Name="Btn9"
+                Text="9"
+                SemanticProperties.Hint="9"
+                Clicked="ProcessNumbers" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                    Spacing="10"
+                
+                    HorizontalOptions="Center">
+
+                <Button
+                    x:Name="Btn4"
+                    Text="4"
+                    SemanticProperties.Hint="4"
+                    Clicked="ProcessNumbers"/>
+
+                <Button
+                    x:Name="Btn5"
+                    Text="5"
+                    SemanticProperties.Hint="5"
+                    Clicked="ProcessNumbers" />
+
+                <Button
+                    x:Name="Btn2"
+                    Text="2"
+                    SemanticProperties.Hint="2"
+                    Clicked="ProcessNumbers" />
+
+                <Button
+                    x:Name="Btn3"
+                    Text="3"
+                    SemanticProperties.Hint="3"
+                    Clicked="ProcessNumbers" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                    Spacing="10"
+                
+                    HorizontalOptions="Center">
+
+                <Button
+                    x:Name="BtnEql"
+                    Text="="
+                    SemanticProperties.Hint="="
+                    Clicked="ProcessOperators"/>
+                
+                <Button
+                    x:Name="Btn1"
+                    Text="1"
+                    SemanticProperties.Hint="1"
+                    Clicked="ProcessNumbers"/>
+
+                <Button
+                    x:Name="Btn0"
+                    Text="0"
+                    SemanticProperties.Hint="0"
+                    Clicked="ProcessNumbers" />
+
+                <Button
+                    x:Name="BtnClr"
+                    Text="C"
+                    BackgroundColor="DarkGoldenrod"
+                    SemanticProperties.Hint="C"
+                    Clicked="ProcessOperators"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                    Spacing="10"
+                
+                    HorizontalOptions="Center">
+
+                <Button
+                    x:Name="Btnx"
+                    Text="*"
+                    SemanticProperties.Hint="x"
+                    Clicked="ProcessOperators"/>
+
+                <Button
+                    x:Name="Btnplus"
+                    Text="+"
+                    SemanticProperties.Hint="+"
+                    Clicked="ProcessOperators" />
+
+                <Button
+                    x:Name="BtnDiv"
+                    Text="/"
+                    SemanticProperties.Hint="/"
+                    Clicked="ProcessOperators" />
+
+                <Button
+                    x:Name="BtnSub"
+                    Text="-"
+                    SemanticProperties.Hint="-"
+                    Clicked="ProcessOperators" />
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                    Spacing="10"
+                
+                    HorizontalOptions="Center">
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
