@@ -3,8 +3,8 @@
 public partial class MainPage : ContentPage
 {
     private static bool start = false;
-    private long number1 = 0;
-    private long number2 = 0;
+    private decimal number1 = 0;
+    private decimal number2 = 0;
     private long multiplier = 1;
     private bool processNumber2Now = false;
     private char sOperator;
@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-    private decimal ProcessCalulate(long number1, long number2, char lOper)
+    private decimal ProcessCalulate(decimal number1, decimal number2, char lOper)
     {
         decimal retValue = 0;
 
@@ -55,7 +55,7 @@ public partial class MainPage : ContentPage
             // Processing Number 1
             String value = ((Button)sender).Text;
             number1 *= multiplier;
-            number1 += Int32.Parse(value);
+            number1 += decimal.Parse(value);
             Console.WriteLine("Number1: " + number1);
             CounterBtn.Text = $"{number1}";
         }
@@ -64,7 +64,7 @@ public partial class MainPage : ContentPage
             // Processing Number 2
             String value = ((Button)sender).Text;
             number2 *= multiplier;
-            number2 += Int32.Parse(value);
+            number2 += decimal.Parse(value);
             Console.WriteLine("Number2: " + number2);
             CounterBtn.Text = $"{number2}";
         }
@@ -83,8 +83,13 @@ public partial class MainPage : ContentPage
             // Is this equal to 
             // Process the two number and print the result.
             lDisplayValue = ProcessCalulate(number1, number2, sOperator);
-            CounterBtn.Text = $"{lDisplayValue:0000.0000}";
+            CounterBtn.Text = $"{lDisplayValue}";
             SemanticScreenReader.Announce(CounterBtn.Text);
+            number2= 0;
+            number1 = lDisplayValue;
+            processNumber2Now = true;
+            start = false;
+
         }
         else if (value.Contains('C'))
         {
@@ -99,9 +104,9 @@ public partial class MainPage : ContentPage
             CounterBtn.Text = $" ";
             SemanticScreenReader.Announce(CounterBtn.Text);
 
-        }
-        else if (!processNumber2Now)
-        {
+        } 
+        else
+        { 
             CounterBtn.Text = $" ";
             SemanticScreenReader.Announce(CounterBtn.Text);
             switch (value[0])
