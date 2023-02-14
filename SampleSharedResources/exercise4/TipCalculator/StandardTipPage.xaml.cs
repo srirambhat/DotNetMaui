@@ -27,14 +27,14 @@ public partial class StandardTipPage : ContentPage
 
     void OnLight(object sender, EventArgs e)
     {
-        Resources["fgColor"] = colorNavy;
-        Resources["bgColor"] = colorSilver;
+        App.Current.Resources["fgColor"] = colorNavy;
+        App.Current.Resources["bgColor"] = colorSilver;
     }
 
     void OnDark(object sender, EventArgs e)
     {
-        Resources["fgColor"] = colorSilver;
-        Resources["bgColor"] = colorNavy;
+        App.Current.Resources["fgColor"] = colorSilver;
+        App.Current.Resources["bgColor"] = colorNavy;
     }
 
     async void GotoCustom(object sender, EventArgs e)
